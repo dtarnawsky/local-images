@@ -1,0 +1,7 @@
+{
+  "name": "local-images",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
