@@ -14,6 +14,7 @@
   </ion-header>
 
   <div id="container">
-    <app-cached-img src="https://ionic.io/blog/wp-content/uploads/2024/02/superappblog-feature-image-2048x1024.png"></app-cached-img>
+    <ion-button (click)="change()">Selfie</ion-button>
+    <app-cached-img [src]="src"></app-cached-img>
   </div>
 </ion-content>
