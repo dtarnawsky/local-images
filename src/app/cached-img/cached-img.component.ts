@@ -1,10 +1,9 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, effect, input } from '@angular/core';
-import { getCachedImage } from '../cached-store';
+import { getCachedImage } from './cached-store';
 
 @Component({
   selector: 'app-cached-img',
   templateUrl: './cached-img.component.html',
-  styleUrls: ['./cached-img.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true
 

@@ -39,17 +39,10 @@ async function storeImage(url: string, path: string) {
   return savedFile;
 }
 
-// Hack for Capacitor with Angular: See https://github.com/ionic-team/capacitor/issues/1564
-function getFileReader(): FileReader {
-  const fileReader = new FileReader();
-  const zoneOriginalInstance = (fileReader as any)['__zone_symbol__originalInstance'];
-  return zoneOriginalInstance || fileReader;
-}
-
 function blobToBase64(blob: Blob) {
   return new Promise((resolve, reject) => {
     try {
-      const reader = getFileReader(); // new FileReader();
+      const reader = new FileReader();
       reader.onloadend = () => resolve(reader.result);
       reader.onerror = reject;
       reader.readAsDataURL(blob);
